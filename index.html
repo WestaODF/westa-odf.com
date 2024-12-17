@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="this wesite is about the history of West Africa Orphanage Development foundation">
+        <meta name ="keywords" content="WESTA-ODF, history of WESTA-ODF, payment method of WESTA-ODF, benefactors of WESTA-ODF, West Africa Orphanage Development Foundation, orphanage homes, humanitarian supports, west Africa, help the poor, sponsor the Africans">
+        <meta name = "googlebot-news" content="index, follow, max-image-preview:large, max-snippet:-1,max-video-preview:-1">
+        <meta property="og:url" content="https://WESTA-ODF.com">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="WESTA-ODF">
+        <meta property="og:description" content="West Africa Orphanage Development Foundation">
+        <meta name="twitter:url" content="https://WESTA-ODF.com">
+        <meta name="twitter:title" content="WESTA-ODF">
+        <meta name="twitter:description" content="West Africa Orphanage Development Foundation">
+        <title>West Africa Orphanage Development Foundation</title>
+        <link rel="shortcut icon" href="/Images/logo.webp" type="image/x-icon">
+        <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">WESTA-ODF</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" onclick="loadContent('history')">History</a></li>
+                    <li><a href="#" onclick="loadContent('payment')">Payment Section</a></li>
+                    <li><a href="#" onclick="loadContent('benefactors')">Benefactors</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content" class="main-content">
+        <section class="welcome">
+            <h2>Welcome to WESTA-ODF</h2>
+            <p>Thank you for visiting the West Africa Orphanage Development Foundation. Please use the navigation bar to explore the foundation's history, payment section, or benefactors. We hope you find inspiration in our mission to empower orphaned children across West Africa.</p>
+            <p>Click on the links above to navigate to any section of the website. We appreciate your interest and support!</p>
+        </section>
+    </main>
+
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 WESTA-ODF. All Rights Reserved.</p>
+            <div class="founder-img">
+                <img src="Images/Christiana-pics.jpg" alt="Founder" width="300" height="300" class="founder-photo">
+                <p>Founder: Christiana Aderonke </p>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        // Get all navbar links
+        const navbarLinks = document.querySelectorAll('.nav ul li a');
+    
+        // Get the main content section
+        const mainContent = document.querySelector('.main-content');
+    
+        // Function to apply transparent background effect
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mainContent.classList.add('transparent-bg');
+            });
+        });
+
+        
+    </script>
+    
+</body>
+</html>

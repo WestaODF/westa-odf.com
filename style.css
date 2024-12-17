@@ -1,0 +1,271 @@
+ /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    text-indent: 7%;
+}
+/* Header Design */
+.header {
+    background-color: rgb(78, 106, 106);
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Navigation - Adjust for small screens */
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Ensure dropdown links display properly */
+.nav ul li {
+    position: relative;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: small;
+    display: block;
+    padding: 10px;
+}
+
+.nav ul li a:hover {
+    color: orange;
+}
+
+.nav ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(78, 106, 106);
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown a {
+    padding: 10px;
+    color: white;
+    font-weight: normal;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: orange;
+}
+
+/* Main content */
+.main-content {
+    min-height: 80vh;
+    padding: 2rem;
+    background-color: rgba(11, 40, 9, 0.5);
+    color: white;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    background-image: url('Images/background-image.jpg'); /* Replace with your desired background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+/* Welcome section */
+.welcome h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.welcome p {
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+.payment a{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+.payment a:hover,
+.payment a:active{
+    color: blueviolet;
+}
+
+.loader{
+   display: none;
+}
+
+.success{
+   display: none;
+}
+
+/* Form */
+fieldset{
+    min-width:300px;
+}
+form{
+   padding: 1rem;
+    
+
+}
+
+label{
+ display: block;
+}
+input{
+  display: block;
+  border: none;
+  min-width: 100%;
+  max-height:40px;
+  border-radius: 20px;
+  background-color: aliceblue;
+  opacity: 0.95;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.choose-file{
+    width: 10px;
+    height: 40px;
+    color: black;
+}
+
+form button{
+    width: fit-content;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border-color: orange;
+    cursor: pointer;
+    
+}
+form button:active{
+    background-color: orange;
+    cursor: pointer;
+}
+
+/* Benefactor */
+.benefactor{
+    text-align: center;
+    
+}
+
+.image-section{
+    max-height: 600vh;
+    
+}
+.image-holder{
+    max-width: 300px;
+    /*  min-width: 30%;
+    max-width: fit-content;  */
+    color: white;
+    padding: 1rem;
+    font-size: 1.3rem;
+    background-color: rgb(94, 90, 90);
+    white-space: wrap;
+    margin-left:  auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: gold;
+    text-align: center;
+}
+.divider{
+    margin: 20px;
+}
+.image-holder img {
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: black;
+
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.founder-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+/* Active class to make background transparent */
+.transparent-bg {
+    background-color: transparent !important;
+    opacity: 0.8;
+}
+
+/* Mobile and Small Screen Adjustments */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Navbar and menu links drop to a new line */
+    .nav ul {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav ul li {
+        display: block;
+        width: 100%; /* Make the links span full width */
+        margin-bottom: 10px; /* Space out the items vertically */
+    }
+
+    .nav ul li a {
+        padding: 12px;
+        font-size: 1.2rem; /* Adjust the font size for mobile */
+        width: 100%; /* Ensure the links are full width */
+        text-align: left; /* Align text to the left */
+    }
+
+    .dropdown {
+        position: static;
+        display: none; /* Hide dropdown on small screens */
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        margin-left: auto; /* Ensure it's at the right */
+    }
+}
